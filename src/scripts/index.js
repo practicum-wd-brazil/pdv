@@ -1,3 +1,22 @@
+const mobileOrderListBtn = document.querySelector("#order__mobile-button");
+
+const showOrderList = function (event) {
+  const orderList = document.querySelector("#order");
+  mobileOrderListBtn.classList.add("mobile-hidden");
+  orderList.classList.remove("mobile-hidden");
+};
+
+mobileOrderListBtn.addEventListener("click", showOrderList);
+
+const orderButton = document.querySelector("#order__button");
+
+const hideOrderList = function (event) {
+  const orderList = document.querySelector("#order");
+  mobileOrderListBtn.classList.remove("mobile-hidden");
+  orderList.classList.add("mobile-hidden");
+};
+orderButton.addEventListener("click", hideOrderList);
+
 const addProduct = function (event) {
   // extrair os dados do produto
   const product = event.target.closest(".product");
