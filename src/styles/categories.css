@@ -15,8 +15,22 @@
   color: var(--lightgray);
   font-size: 1.125rem;
   cursor: pointer;
+  transition: linear .5s;
 }
 
-.categories__item:hover {
-  color: var(--white);
+.categories__text , .categories__icon{
+  transition: linear .5s;
+}
+
+.categories__icon_actived{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1941%) hue-rotate(238deg) brightness(117%) contrast(100%);  
+  transform: scale(1.8);
+  transition: linear .5s;
+}
+
+.categories__text_actived{
+  transform: scale(1.5);
+  color: white;
+  margin-left: 1.375rem;
+  transition: linear .5s;
 }

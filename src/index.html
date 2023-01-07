@@ -18,17 +18,17 @@
     <main class="container">
       <nav class="categories">
         <ul class="categories__list">
-          <li>
+          <li class="categorie">
             <button class="categories__item">
               <img
-                class="categories__icon"
+                class="categories__icon "
                 src="./images/bebidas.svg"
                 alt="Bebidas"
               />
               <span class="categories__text">Bebidas</span>
             </button>
           </li>
-          <li>
+          <li class="categorie">
             <button class="categories__item">
               <img
                 class="categories__icon"
@@ -38,7 +38,7 @@
               <span class="categories__text">Doces</span>
             </button>
           </li>
-          <li>
+          <li class="categorie">
             <button class="categories__item">
               <img
                 class="categories__icon"
@@ -85,7 +85,7 @@
         </button>
       </section>
     </main>
-    <div class="modal modal_create-product">
+    <div class="modal modal_create-product ">
       <article class="modal__container modal__container_product">
         <header>
           <h1>Novo Produto</h1>
@@ -118,6 +118,13 @@
             <button class="button button_type_success">Salvar Produto</button>
           </form>
         </main>
+      </article>
+    </div>
+    <div class="modal modal_opened">
+      <article class="modal__container modal_container_sucess">
+        <h2 class="modal__title">Pedido Finalizado</h2>
+        <p class="modal__text">Seu pedido foi finalizado com sucesso</p>
+        <img alt="Sucesso" src="./images/sucess.png">
       </article>
     </div>
   </body>

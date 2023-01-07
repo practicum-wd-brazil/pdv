@@ -63,6 +63,34 @@ buttons.forEach(function (button) {
   button.addEventListener("click", addProduct);
 });
 
+//navbar
+
+const navList = document.querySelectorAll('.categories__item');
+
+function navItemActive(element){
+  const navItem = element.target.closest('.categorie');
+  const navIcon = navItem.querySelector('.categories__icon');
+  const navText = navItem.querySelector('.categories__text');
+  
+  resetClasses();
+
+  navIcon.classList.add('categories__icon_actived');
+  navText.classList.add('categories__text_actived');
+
+}
+
+navList.forEach((element)=>element.addEventListener('click', navItemActive));
+
+function resetClasses() {
+  const navIcons = document.querySelectorAll('.categories__icon');
+  navIcons.forEach((element) => element.className = 'categories__icon');
+
+  const navTexts = document.querySelectorAll('.categories__text');
+  navTexts.forEach((element) => element.className = 'categories__text');
+}
+
+//Form do modal
+
 const productForm = document.forms["form-product"];
 function toggleProductModal() {
   const productModal = document.querySelector(".modal_create-product");
